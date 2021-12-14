@@ -65,12 +65,19 @@ func addStudent() {
 
 func deleteStudent() {
 	var yourname string
+	var flag bool
 	fmt.Print("请输入要删除学生的姓名")
 	fmt.Scanln(&yourname)
 	for k, v := range allStudent {
 		if v.name == yourname {
+			flag = true
 			delete(allStudent, k)
 		}
+	}
+	if flag {
+		fmt.Printf("删除学生%s信息成功\n", yourname)
+	} else {
+		fmt.Println("学信信息不存在，无法删除")
 	}
 }
 
@@ -96,7 +103,12 @@ func main() {
 		fmt.Print("请输入你要进行的操作：")
 		var choice int
 		fmt.Scanln(&choice)
-		fmt.Printf("你选择了%s\n", choiceMap[choice])
+		_, ok := choiceMap[choice]
+		if ok {
+			fmt.Printf("你选择了%s\n", choiceMap[choice])
+		} else {
+			fmt.Println("请输入正确的正整数")
+		}
 		// 3.执行对应函数
 		switch choice {
 		case 1:
@@ -110,6 +122,6 @@ func main() {
 		default:
 			fmt.Println("请输入正确的正整数")
 		}
-		fmt.Println("*********************************")
+		fmt.Println("*********************************************")
 	}
 }
