@@ -76,7 +76,7 @@ func (f *FileLogger) log(lv LogLevel, format string, a ...interface{}) {
 		now := time.Now()
 		funcName, filePath, line := getInfo(3)
 		if f.checkSize(f.fileObj) {
-			f.splitFile()
+			// f.splitFile()
 		}
 		fmt.Fprintf(f.fileObj, "[%s] [%s] [%s:%s:%d]%s\n", now.Format("2006-01-02 15:04:05"), getLogString(lv), funcName, filePath, line, msg)
 		if lv >= ERROR {
@@ -86,24 +86,24 @@ func (f *FileLogger) log(lv LogLevel, format string, a ...interface{}) {
 	}
 }
 
-func (f *FileLogger) splitFile(file *os.File) (*os.File, err) {
-	// 需要切割日志文件
-	// 1.关闭当前的文件日志
-	file.Close()
-	// 2.备份一下 rename
-	nowStr := time.Now().Format("20060102150405000")
-	logName := path.Join(f.filePath, f.fileName)
-	newLogName := fmt.Sprintf("%s.bak%s", logName, nowStr)
-	os.Rename(logName, newLogName)
-	// 3.打开一个新的日志文件
-	fileObj, err := os.OpenFile(logName, os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0644)
-	if err != nil {
-		fmt.Printf("open file failed, err:%s\n", err)
-		return nil, err
-	}
-	f.fileObj = fileObj
-	// 4.将打开的日志文件对象赋值给 f.fileObj
-}
+// func (f *FileLogger) splitFile(file *os.File) (*os.File, err) {
+// 	// 需要切割日志文件
+// 	// 1.关闭当前的文件日志
+// 	file.Close()
+// 	// 2.备份一下 rename
+// 	nowStr := time.Now().Format("20060102150405000")
+// 	logName := path.Join(f.filePath, f.fileName)
+// 	newLogName := fmt.Sprintf("%s.bak%s", logName, nowStr)
+// 	os.Rename(logName, newLogName)
+// 	// 3.打开一个新的日志文件
+// 	fileObj, err := os.OpenFile(logName, os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0644)
+// 	if err != nil {
+// 		fmt.Printf("open file failed, err:%s\n", err)
+// 		return nil, err
+// 	}
+// 	f.fileObj = fileObj
+// 	// 4.将打开的日志文件对象赋值给 f.fileObj
+// }
 
 func (f *FileLogger) Debug(format string, a ...interface{}) {
 	f.log(DEBUG, format, a...)
