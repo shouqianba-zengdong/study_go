@@ -1,0 +1,24 @@
+[2021-12-17 14:22:49] [INFO] [main.main:main.go:20]这是一条Info级别的日志
+[2021-12-17 14:22:49] [WARNING] [main.main:main.go:22]这是一条Warning级别的日志
+[2021-12-17 14:22:49] [ERROR] [main.main:main.go:24]这是一条Error级别的日志id:10000 name:曾东
+[2021-12-17 14:22:49] [FATAL] [main.main:main.go:26]这是一条Fatal级别的日志
+[2021-12-17 14:22:52] [INFO] [main.main:main.go:20]这是一条Info级别的日志
+[2021-12-17 14:22:52] [WARNING] [main.main:main.go:22]这是一条Warning级别的日志
+[2021-12-17 14:22:52] [ERROR] [main.main:main.go:24]这是一条Error级别的日志id:10000 name:曾东
+[2021-12-17 14:22:52] [FATAL] [main.main:main.go:26]这是一条Fatal级别的日志
+[2021-12-17 14:22:55] [INFO] [main.main:main.go:20]这是一条Info级别的日志
+[2021-12-17 14:22:55] [WARNING] [main.main:main.go:22]这是一条Warning级别的日志
+[2021-12-17 14:22:55] [ERROR] [main.main:main.go:24]这是一条Error级别的日志id:10000 name:曾东
+[2021-12-17 14:22:55] [FATAL] [main.main:main.go:26]这是一条Fatal级别的日志
+[2021-12-17 14:22:58] [INFO] [main.main:main.go:20]这是一条Info级别的日志
+[2021-12-17 14:22:58] [WARNING] [main.main:main.go:22]这是一条Warning级别的日志
+[2021-12-17 14:22:58] [ERROR] [main.main:main.go:24]这是一条Error级别的日志id:10000 name:曾东
+[2021-12-17 14:22:58] [FATAL] [main.main:main.go:26]这是一条Fatal级别的日志
+[2021-12-17 14:23:01] [INFO] [main.main:main.go:20]这是一条Info级别的日志
+[2021-12-17 14:23:01] [WARNING] [main.main:main.go:22]这是一条Warning级别的日志
+[2021-12-17 14:23:01] [ERROR] [main.main:main.go:24]这是一条Error级别的日志id:10000 name:曾东
+[2021-12-17 14:23:01] [FATAL] [main.main:main.go:26]这是一条Fatal级别的日志
+[2021-12-17 14:23:04] [INFO] [main.main:main.go:20]这是一条Info级别的日志
+[2021-12-17 14:23:04] [WARNING] [main.main:main.go:22]这是一条Warning级别的日志
+[2021-12-17 14:23:04] [ERROR] [main.main:main.go:24]这是一条Error级别的日志id:10000 name:曾东
+[2021-12-17 14:23:04] [FATAL] [main.main:main.go:26]这是一条Fatal级别的日志
